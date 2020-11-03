@@ -1,0 +1,110 @@
+{% extends "base.njk" %}
+
+{% set title = 'Demystifying Email Design' %}
+
+{% block content %}
+
+<!-- MAIN HTML EMAIL CONTAINER -->
+<table class="container" width="600" align="center" border="0" cellpadding="0" cellspacing="0">
+
+  <!-- HEADER ROW -->
+  <tr>
+    <td class="header-cell" bgcolor="#70bbd9" align="center">
+      <img class="header-img" src="images/logo.gif" alt="Icon Email" width="300" height="230" />
+    </td>
+  </tr>
+
+  <!-- MAIN CONTENT ROW -->
+  <tr>
+    <td class="main-content" bgcolor="#ffffff">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="main-content-title">
+            <b>Lorem ipsum dolor sit amet!</b>
+          </td>
+        </tr>
+        <tr>
+          <td class="main-content-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum, maxime totam fugit
+            voluptate. Quidem perspiciatis, soluta modi nam ducimus deserunt, ipsum dignissimos aliquid
+            voluptatibus ab non autem, quo fugiat.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="260" valign="top">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="icon-container" bgcolor="#333333" height="200px" align="center" valign="middle">
+                        <img src="images/responsive.png" alt="Icon Responsive" width="128" height="137">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="column-copy">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quibusdam commodi
+                        doloremque! Praesentium, nobis, maiores?
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="gutter-cell" width="20">&nbsp;</td>
+                <td width="260" valign="top">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="icon-container" bgcolor="#333333" height="200px" align="center" valign="middle">
+                        <img src="images/clock.png" alt="Icon Clock" width="129" height="129">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="column-copy">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum consequuntur incidunt
+                        saepe placeat suscipit excepturi sequi, quis, et. Obcaecati, ut!
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- FOOTER ROW -->
+  <tr>
+    <td class="footer-padding" bgcolor="#ee4c50">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="copyright-column" width="75%">
+            &reg; Someone, somewhere 2013<br />
+            <a class="unsubscribe-link" href="#">
+              <font color="#ffffff">Unsubscribe</font>
+            </a> to this newsletter instantly
+          </td>
+          <td width="25%" align="right">
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="social-icon-cell">
+                  <a class="social-icon-link" href="http://facebook.com/username">
+                    <img src="images/facebook.png" alt="facebook" width="33" height="33" border="0">
+                  </a>
+                </td>
+                <td class="gutter-cell" width="15">&nbsp;</td>
+                <td class="social-icon-cell">
+                  <a class="social-icon-link" href="http://twitter.com/username">
+                    <img src="images/twitter.png" alt="twitter" width="33" height="33" border="0">
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table><!-- /.container -->
+
+{% endblock %}

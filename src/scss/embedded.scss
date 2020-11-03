@@ -1,0 +1,82 @@
+@import './partials/variables';
+
+/* CLIENT-SPECIFIC STYLES */
+body,
+table,
+td,
+a {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* RESET STYLES */
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse !important;
+}
+
+body {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* iOS BLUE LINKS RESET */
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+}
+
+/* GMAIL BLUE LINKS RESET */
+u+#body a {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+}
+
+.link {
+  transition: color 0.15s ease-in-out;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: blue !important;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 620px) {
+  .responsive-table {
+    width: 100% !important;
+  }
+
+  .left-column {
+    margin-right: 0 !important;
+    margin-bottom: 30px;
+  }
+}
