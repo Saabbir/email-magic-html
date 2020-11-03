@@ -1,15 +1,16 @@
 const PUBLISH_DIRECTORY = 'docs';
+const PREPEND_IMG_SRC_URL = 'https://saabbir.com/email-magic-html/';
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
 const nunjucksRender = require('gulp-nunjucks-render');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 const gulpInlineCSS = require('gulp-inline-css');
 const browserSync = require('browser-sync').create();
+const gulpReplaceImageSrc = require('gulp-replace-image-src');
 
 function transpileInlineSCSS() {
   return gulp
@@ -78,7 +79,7 @@ function optimizeImages() {
 }
 
 function cleanBuild() {
-  return del(PUBLISH_DIRECTORY);
+  return del([PUBLISH_DIRECTORY, 'dist']);
 }
 
 function startBrowserSync(done) {
@@ -96,17 +97,6 @@ function reloadBrower(done) {
 
   done();
 }
-
-exports.build = buildTask = gulp.series(
-  cleanBuild,
-  gulp.parallel(
-    transpileInlineSCSS,
-    transpileEmbeddedSCSS,
-    optimizeImages
-  ),
-  transpileNunjucks,
-  inlineCSS
-)
 
 function watchFileChanges(done) {
   gulp.watch('./src/**/*.scss', gulp.series(
@@ -128,10 +118,32 @@ function watchFileChanges(done) {
   done();
 }
 
+function prependImgSrc() {
+  return gulp
+    .src(`${PUBLISH_DIRECTORY}/*.html`)
+    .pipe(gulpReplaceImageSrc({
+      prependSrc : PREPEND_IMG_SRC_URL,
+      keepOrigin : true
+    }))
+    .pipe(gulp.dest('dist'));
+}
+
+exports.build = buildTask = gulp.series(
+  cleanBuild,
+  gulp.parallel(
+    transpileInlineSCSS,
+    transpileEmbeddedSCSS,
+    optimizeImages
+  ),
+  transpileNunjucks,
+  inlineCSS,
+  prependImgSrc
+);
+
 exports.dev = gulp.series(
   buildTask,
   gulp.parallel(
     startBrowserSync,
     watchFileChanges
   )
-)
+);

@@ -2,7 +2,7 @@
 
 ![Demystifying Email Design](screenshot.png)
 
-Coded this HTML email template by following tutsplus article - https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770
+Coded this HTML email template by following tutsplus article - [Build an HTML Email Template From Scratch](https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770)
 
 Later added gulp workflow with nunjucks templating and scss setup.
 
@@ -50,3 +50,5 @@ This project uses a number of open source projects for the development build:
 ## References
 
 - [tutsplus-article](https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770)
+- [A Gulp Workflow for Building HTML Email](https://bitsofco.de/a-gulp-workflow-for-building-html-email/)
+- [gulp-email-workflow](https://github.com/ireade/gulp-email-workflow)
