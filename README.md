@@ -46,3 +46,7 @@ This project uses a number of open source projects for the development build:
 - [gulp-inline-css](https://ghub.io/gulp-inline-css)
 - [gulp-nunjucks-render](https://ghub.io/gulp-nunjucks-render)
 - [gulp-sass](https://ghub.io/gulp-sass)
+
+## References
+
+- [tutsplus-article](https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770)
