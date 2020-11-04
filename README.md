@@ -19,7 +19,7 @@ Demo can be seen in here - https://saabbir.github.io/email-magic-html/
 Clone this repo:
 
 ```sh
-git clone https://gitlab.com/Saabbir/holy-orders.git
+git clone https://github.com/Saabbir/email-magic-html.git
 ```
 
 This project is based on [Node.js](https://nodejs.org/en/). To install the necessary packages, run this command in the root folder of the site:
